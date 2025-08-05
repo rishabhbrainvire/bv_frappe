@@ -48,7 +48,7 @@ create_new_instance() {
 
 
   echo "🌐 Creating new site..."
-  bench new-site bvfrappe.local \
+  bench new-site frappecrm.brainvire.net \
     --force \
     --mariadb-root-password 123 \
     --admin-password admin \
@@ -56,13 +56,13 @@ create_new_instance() {
 
   echo "📦 Installing apps..."
   # ERP gets setup automatically
-  bench --site bvfrappe.local install-app hrms
-  bench --site bvfrappe.local install-app crm
-  bench --site bvfrappe.local set-config developer_mode 1
-  bench --site bvfrappe.local set-config mute_emails 1
-  bench --site bvfrappe.local set-config server_script_enabled 1
-  bench --site bvfrappe.local clear-cache
-  bench use bvfrappe.local
+  bench --site frappecrm.brainvire.net install-app hrms
+  bench --site frappecrm.brainvire.net install-app crm
+  bench --site frappecrm.brainvire.net set-config developer_mode 1
+  bench --site frappecrm.brainvire.net set-config mute_emails 1
+  bench --site frappecrm.brainvire.net set-config server_script_enabled 1
+  bench --site frappecrm.brainvire.net clear-cache
+  bench use frappecrm.brainvire.net
 
   echo "💾 Backing up frappe-bench to $BACKUP_DIR"
   mkdir -p "$BACKUP_DIR"

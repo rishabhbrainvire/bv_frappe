@@ -24,11 +24,10 @@ services:
     working_dir: /home/frappe
     volumes:
       - ./init.sh:/workspace/init.sh
-      - ./backup-bench:/home/frappe/backup-bench  # 👈 bind mount
+      - ./backup-bench:/home/frappe/backup-bench
     ports:
-      - 8000:8000
+      - 8002:8000
       - 9000:9000
 
 volumes:
   mariadb-data:
-  

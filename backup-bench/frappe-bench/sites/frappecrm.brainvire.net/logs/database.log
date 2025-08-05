@@ -1,0 +1,46 @@
+2025-08-05 12:54:17,946 WARNING database DDL Query made to DB:
+create table `tabCRM Holiday List` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`holiday_list_name` varchar(140) UNIQUE,
+`from_date` date,
+`to_date` date,
+`total_holidays` int(11) NOT NULL DEFAULT 0,
+`weekly_off` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-08-05 12:54:18,035 WARNING database DDL Query made to DB:
+create table `tabCRM Communication Status` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`status` varchar(140) UNIQUE,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-08-05 12:54:19,075 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmail Template` ADD COLUMN `enabled` tinyint(4) NOT NULL DEFAULT 0, ADD COLUMN `reference_doctype` varchar(140)
